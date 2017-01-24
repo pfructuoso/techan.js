@@ -42,12 +42,6 @@ module.exports = function() {
     accessor.dif = difference;
     accessor.z = zero;
 
-    // Allow using macd accessor in ohlc dependent.
-    accessor.h =
-      accessor.l =
-      accessor.c =
-      accessor.o = macd;
-
     return accessor;
   }
 
