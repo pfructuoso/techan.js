@@ -28,7 +28,8 @@ module.exports = function(d3) {
     williams: require('./williams')(indicatorMixin, accessor.ohlc, ema),
     adx: require('./adx')(d3.max, indicatorMixin, accessor.ohlc, ema),
     bollinger: require('./bollinger')(indicatorMixin, accessor.ohlc, sma),
-    vwap: vwap
+    vwap: vwap,
+    keltner: require('./keltner')(indicatorMixin, accessor.ohlc, sma, atr)
    };
 };
 
