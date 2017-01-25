@@ -13,7 +13,14 @@ module.exports = function() {
         d.value = _;
         return accessor;
       },
-      zero = function(d) { return 0; };
+      zero = function(d) {
+        if (typeof d.zero === 'undefined' || d.zero === null) {
+          return 0;
+        }
+        else {
+          return d.zero;
+        }
+      };
 
   function accessor(d) {
     return accessor.v(d);

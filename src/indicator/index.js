@@ -29,7 +29,8 @@ module.exports = function(d3) {
     adx: require('./adx')(d3.max, indicatorMixin, accessor.ohlc, ema),
     bollinger: require('./bollinger')(indicatorMixin, accessor.ohlc, sma),
     vwap: vwap,
-    keltner: require('./keltner')(indicatorMixin, accessor.ohlc, sma, atr)
+    keltner: require('./keltner')(indicatorMixin, accessor.ohlc, sma, atr),
+    momentum: require('./momentum')(indicatorMixin, accessor.ohlc)
    };
 };
 
